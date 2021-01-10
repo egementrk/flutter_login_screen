@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
     //Size size = MediaQuery.of(context).size;
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.grey),
-      title: 'Material App',
+      debugShowCheckedModeBanner: false,
+      title: 'Login App',
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: buildAppBar(context),
