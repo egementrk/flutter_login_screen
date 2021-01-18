@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:login_screen/custom_button.dart';
-import 'package:login_screen/custom_text_field.dart';
-import 'package:login_screen/or_divider.dart';
-import 'package:login_screen/social_icons.dart';
+import 'package:login_screen/model/custom_button.dart';
+import 'package:login_screen/model/custom_text_field.dart';
+import 'package:login_screen/model/or_divider.dart';
+import 'package:login_screen/sign_in/social_icons.dart';
+import 'package:login_screen/context_extension.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -17,7 +16,7 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: context.paddingHigh,
           child: Column(
             children: [
               CustomTextField(
@@ -25,7 +24,7 @@ class Body extends StatelessWidget {
                 preIcon: Icon(Icons.email_outlined),
               ),
               SizedBox(
-                height: size.height * 0.04,
+                height: context.mediumValue,
               ),
               CustomTextField(
                 labelText: "Password",
@@ -42,34 +41,24 @@ class Body extends StatelessWidget {
                         style: TextStyle(color: Colors.black),
                       )),
                   SizedBox(
-                    width: size.width * 0.04,
+                    width: context.sizedBoxMedium,
                   )
                 ],
               ),
               SizedBox(
-                height: size.height * 0.04,
+                height: context.mediumValue,
               ),
               CustomButton(
                 text: "Sıgn In",
               ),
               OrDivider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocialIcons(
-                      iconSrc: "assets/icons/facebook.svg",
-                      press: () {},
-                      size: size),
-                  SocialIcons(
-                      iconSrc: "assets/icons/google.svg",
-                      press: () {},
-                      size: size),
-                  SocialIcons(
-                      iconSrc: "assets/icons/apple.svg",
-                      press: () {},
-                      size: size),
-                ],
-              ),
+              IconPart(size: size),
+              Padding(
+                padding: context.paddingLow,
+                child: Text(
+                  "Sign Up",
+                ),
+              )
             ],
           ),
         ),

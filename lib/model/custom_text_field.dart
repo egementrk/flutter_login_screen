@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:login_screen/context_extension.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -12,9 +13,8 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.08,
+      height: context.fieldValue,
       child: TextField(
         //autocorrect: true,
         decoration: InputDecoration(
