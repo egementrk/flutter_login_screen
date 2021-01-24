@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class OrDivider extends StatelessWidget {
+  final double dividerHeight, dividerWidth;
+
+  const OrDivider({
+    Key key,
+    this.dividerHeight,
+    this.dividerWidth,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(
-          horizontal: size.width * 0.03, vertical: size.height * 0.06),
-      width: size.width * 0.8,
+          horizontal: dividerWidth, vertical: dividerHeight),
       child: Row(
         children: [
           Expanded(

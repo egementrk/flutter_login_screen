@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/body.dart';
+import 'package:login_screen/sign_in/sigin_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.grey),
       debugShowCheckedModeBanner: false,
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: buildAppBar(context),
-        body: Body(),
+        body: SiginScreen(),
       ),
     );
   }

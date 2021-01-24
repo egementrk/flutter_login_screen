@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/context_extension.dart';
+import 'package:login_screen/components/context_extension.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -16,8 +16,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: context.buttonValueW,
-      height: context.buttonValueH,
+      width: context.buttonWidth,
+      height: context.buttonHeight,
       child: ElevatedButton(
         //do Elevated Button
         onPressed: () {},

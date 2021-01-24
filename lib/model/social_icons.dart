@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:login_screen/components/context_extension.dart';
 
 class SocialIcons extends StatelessWidget {
   const SocialIcons({
@@ -18,7 +19,7 @@ class SocialIcons extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.all(size.width * 0.03),
+        margin: EdgeInsets.all(context.widthLow),
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
             border: Border.all(color: HexColor("#B3B7CA"), width: 2),
@@ -26,13 +27,8 @@ class SocialIcons extends StatelessWidget {
         child: SvgPicture.asset(
           iconSrc,
           height: size.height * 0.03,
-          width: size.width * 0.03,
+          width: context.widthLow,
         ),
-        // child: SvgPicture.asset(
-        //   "assets/icons/facebook.svg",
-        //   height: 20,
-        //   width: 20,
-        // ),
       ),
     );
   }
