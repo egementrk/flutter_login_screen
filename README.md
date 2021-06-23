@@ -5,4 +5,3 @@ Simple Login Screen.
 ## Getting Started
 
 
-expo start
