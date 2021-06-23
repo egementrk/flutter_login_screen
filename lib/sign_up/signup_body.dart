@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/SignUp/already_registered.dart';
 import 'package:login_screen/components/context_extension.dart';
 import 'package:login_screen/model/custom_button.dart';
 import 'package:login_screen/model/custom_text_field.dart';
 import 'package:login_screen/model/or_divider.dart';
 import 'package:login_screen/components/icon_part.dart';
+import 'package:login_screen/sign_up/already_registered.dart';
 
 class SignupBody extends StatelessWidget {
   const SignupBody({
